@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+  color: white;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  height: 100vh;
+}
+
+.left {
+  max-width: 500px;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+h1 span {
+  color: #facc15;
+}
+
+p {
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.start {
+  background: #facc15;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.edit {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.info {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.right {
+  position: relative;
+}
+
+.right img {
+  width: 800px;
+  border-radius: 20px;
+  height: 80vh;
+  margin-bottom: 30px;
+}
+
+.circle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.yellow {
+  background: #facc15;
+  top: -20px;
+  right: -20px;
+}
+
+.pink {
+  background: #ec4899;
+  bottom: -20px;
+  left: -20px;
+}
