@@ -1,43 +1,57 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: linear-gradient(135deg, #8b5cf6, #06b6d4);
-  color: white;
+  background: #f4f9fc;
+  color: #1e3a5f;
 }
 
+/* HERO */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 60px;
-  height: 100vh;
+  min-height: 100vh; /* 👈 mejor que height */
+  gap: 40px;
 }
 
+/* LEFT */
 .left {
+  flex: 1;
   max-width: 500px;
 }
 
-.badge {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 8px 15px;
-  border-radius: 20px;
-  font-size: 14px;
+/* RIGHT */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
+/* 🔥 IMAGEN ARREGLADA */
+.right img {
+  width: 100%;
+  max-width: 450px; /* 👈 controla tamaño */
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* TEXTOS */
 h1 {
-  font-size: 48px;
+  font-size: 42px;
   margin: 20px 0;
 }
 
 h1 span {
-  color: #facc15;
+  color: #00a8e8;
 }
 
 p {
-  opacity: 0.9;
-  margin-bottom: 20px;
+  color: #2c3e50;
 }
 
+/* BOTONES */
 .buttons {
   display: flex;
   gap: 15px;
@@ -45,58 +59,54 @@ p {
 }
 
 .start {
-  background: #facc15;
+  background: #00a8e8;
+  color: white;
   border: none;
   padding: 12px 20px;
   border-radius: 10px;
   cursor: pointer;
-  font-weight: bold;
 }
 
 .edit {
+  border: 1px solid #00a8e8;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #00a8e8;
   padding: 12px 20px;
   border-radius: 10px;
-  color: white;
-  cursor: pointer;
 }
 
-.info {
-  font-size: 14px;
-  opacity: 0.8;
+/* 🔥 TABLET */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
 }
 
-.right {
-  position: relative;
-}
+/* 🔥 MÓVIL */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
 
-.right img {
-  width: 800px;
-  border-radius: 20px;
-  height: 80vh;
-  margin-bottom: 30px;
-}
+  .left {
+    max-width: 100%;
+  }
 
-.circle {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-}
+  .right img {
+    max-width: 300px;
+  }
 
-.yellow {
-  background: #facc15;
-  top: -20px;
-  right: -20px;
-}
+  h1 {
+    font-size: 28px;
+  }
 
-.pink {
-  background: #ec4899;
-  bottom: -20px;
-  left: -20px;
+  .buttons {
+    flex-direction: column;
+  }
 }
