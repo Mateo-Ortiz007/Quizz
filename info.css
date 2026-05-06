@@ -1,34 +1,154 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: linear-gradient(135deg, #8b5cf6, #06b6d4);
-  color: white;
-  overflow: hidden;
+  background: #f4f9fc;
+  color: #1e3a5f;
+  overflow-y: auto; /* 👈 mejor que hidden */
 }
 
+/* CONTENEDOR */
 .container {
   max-width: 700px;
   margin: auto;
   padding: 40px;
 }
 
+/* TITULO */
 h1 {
   text-align: center;
   margin-bottom: 30px;
+  color: #00a8e8;
 }
 
+/* TEXTO */
 p {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   line-height: 1.6;
+  color: #2c3e50;
 }
 
+/* BOTON */
 button {
   margin-top: 30px;
   width: 100%;
   padding: 15px;
   border: none;
   border-radius: 10px;
-  background: #facc15;
+  background: #00a8e8;
+  color: white;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #007bb5;
+}
+
+/* 🔥 TABLET */
+@media (max-width: 768px) {
+  .container {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  button {
+    padding: 14px;
+  }
+}
+
+/* 🔥 MÓVIL */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+.footer {
+  background: #00a8e8;
+  color: white;
+  padding: 40px 20px 20px;
+  margin-top: 50px;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer h3,
+.footer h4 {
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-social .icons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* 📱 responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-social .icons {
+    align-items: center;
+  }
+}
+
+img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
 }

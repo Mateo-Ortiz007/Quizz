@@ -1,32 +1,82 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: linear-gradient(135deg, purple, blue);
-  color: white;
+  background: #f4f9fc;
+  color: #1e3a5f;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* 👈 mejor que height */
+  padding: 20px;
 }
 
+/* CONTENEDOR */
 .result-container {
   text-align: center;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
+/* TITULOS */
 h1 {
-  font-size: 40px;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #00a8e8;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 28px;
   margin: 20px 0;
 }
 
+/* BOTON */
 button {
   padding: 12px 20px;
   border: none;
   border-radius: 10px;
-  background: #facc15;
+  background: #00a8e8;
+  color: white;
   cursor: pointer;
   font-weight: bold;
+  width: 100%;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #007bb5;
+}
+
+/* 🔥 TABLET */
+@media (max-width: 768px) {
+  .result-container {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+/* 🔥 MÓVIL */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
 }
